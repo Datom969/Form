@@ -1,0 +1,261 @@
+@font-face {
+    font-family: Sofiapro;
+    src: url(/public/images/Sofiapro/Fonts/sofiapro-light.otf);
+}
+
+@font-face {
+    font-family: Browny;
+    src: url(/public/images/Sofiapro/Fonts/Brown/StyreneA-Medium-Trial-BF63f6cbdb24b6d.otf)
+}
+
+@font-face {
+    font-family: Browny;
+    src: url(/public/images/Sofiapro/Fonts/Brown/StyreneA-Light-Trial-BF63f6cbd99dc3e.otf)
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: var(--cl-green, #f1f9f8);
+    padding: 80.5px 140px;
+
+}
+
+html,
+body {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.main-container {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+
+.column-flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 275px;
+}
+
+.logo {
+    width: 77.3px;
+    height: 80px;
+    margin-left: -.5rem;
+}
+
+header>h1 {
+    font-family: Browny;
+    margin-bottom: 20px;
+    font-weight: 700;
+    width: 268px;
+
+}
+
+.paragraph {
+    color: var(--cl-grey, #737373);
+    font-family: Browny;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 25px;
+    width: 500px;
+}
+
+.paragraph>:nth-child(2) {
+    display: none;
+}
+
+.form-container {
+    width: 580px;
+    height: 679px;
+    flex-shrink: 0;
+    background: #FFF;
+    border-radius: 6px;
+    box-shadow: 0px 4px 50px 0px rgba(4, 8, 19, 0.10);
+    padding: 40px;
+}
+
+
+.name,
+.gender,
+.weight,
+.activity-level,
+.password-cont {
+    display: flex;
+    flex-direction: column;
+}
+
+.activity-level,
+.password-cont {
+    margin-left: 2rem;
+}
+
+.name-cont,
+.gender-dob,
+.weight-height {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.password-cont {
+    position: relative;
+}
+
+#pass-show {
+    position: absolute;
+    top: 4.75rem;
+    right: 0;
+    margin-right: 3rem;
+}
+
+#gender,
+input:not(#password) {
+    width: 238px;
+    height: 48px;
+}
+
+#password,
+#activity,
+button {
+    width: 500px;
+    height: 48px;
+}
+
+label {
+    margin-bottom: 10px;
+    margin-top: 30px;
+    font-family: Sofiapro;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+}
+
+button {
+    margin-top: 30px;
+    background: var(--CL-Green, #2EC4B6);
+    box-shadow: (0px 10px 40px rgba(0, 0, 0, 0.10));
+    border: none;
+    color: #FFF;
+    margin-left: 2rem;
+}
+
+input,
+select {
+    outline: none;
+    border: 2px solid #F0F0F0;
+    padding-left: .5rem;
+}
+
+input:hover,
+select:hover {
+    border-color: #2EC4B6;
+
+}
+
+input::placeholder {
+    font-family: Sofiapro;
+    color: var(--CL-Grey, #737373);
+    font-weight: 300;
+    font-size: 14px;
+}
+
+footer>p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Sofiapro;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+footer>p>span {
+    color: var(--CL-Green, #2EC4B6);
+}
+
+@media(max-width:600px) {
+
+    html, body {
+        width: 375px;
+        height: 1294px;
+
+    }
+
+    body{
+        margin:0;
+        padding: 0;
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+    .column-flex {
+        width: 327px;
+        padding-top: 74px;
+    }
+
+    .paragraph>:nth-child(2) {
+        display: block;
+        width: 327px;
+        height: 50px;
+
+    }
+
+    .paragraph>:nth-child(1) {
+        display: none;
+    }
+
+    .main-container {
+        flex-direction: column;
+        gap: 0;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .form-container {
+        width: 317px;
+        height: 870px;
+        flex-shrink: 0;
+        padding: 16px;
+        margin: 24px;
+
+    }
+
+    .name-cont,
+    .gender-dob,
+    .weight-height {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    label {
+        margin-top: 16px;
+        margin-bottom: 10px;
+    }
+
+    button,
+    #activity,
+    #password {
+        width: 295px;
+        height: 48px;
+    }
+
+    button {
+        margin-top: 16px;
+    }
+    
+    footer {
+        margin-top: 24px;
+        width: 316px;
+        height: 50px;
+    }
+}
